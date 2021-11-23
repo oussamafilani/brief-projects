@@ -35,7 +35,7 @@ window.addEventListener('load',async ()=>{
     let m = 100/ nbQuestions
     let i = m
 
-    question_number.innerHTML = i * nbQuestions * 0.01
+    question_number.innerHTML = Math.floor(i * nbQuestions * 1/100)
     increment.style.width = `${i}%`
     i += m;
 
@@ -44,17 +44,12 @@ window.addEventListener('load',async ()=>{
         // clearInterval(progressIncrement)
         // clearInterval(questionsIncrement)
     
-        if(i > 100){
-            console.log('you are done')
-        }
-        else{
+        if(Math.floor(i) <= 100){
             
-            question_number.innerHTML = i * nbQuestions * 1/100
-            console.log('clicked')
+            question_number.innerHTML = Math.floor(i * nbQuestions * 1/100)
             increment.style.width =`${i}%`
-            console.log(i)
             i += m;
-            return i;
+            return i; 
         }
     }
     
@@ -98,7 +93,7 @@ const choices = []
 async function questionsIncrement(){
   let results = await fetchQuestions()
   let [result] = paginate(results, 1, n)
-  if(n === (results.length)){
+  if(n === (results.length) && (itemCounter(choices,true)*10 > (Math.floor(results.length /2)*10)  ) ){
     let  uid = (new Date().getTime()).toString(36)
     let avatar = `https://avatars.dicebear.com/api/pixel-art/${uid}.svg`
 
@@ -130,8 +125,14 @@ async function questionsIncrement(){
 
       })
 
+}else if(n === (results.length) && (itemCounter(choices,true)*10 < (Math.floor(results.length /2)*10)  ) ){
+      document.getElementById("box").style.display = "block";
+      document.querySelector(".bg-win").style.display = "block";
+      document.getElementById("countdown").style.display = "none";
+      document.getElementById("avatarImag").src = "https://media.istockphoto.com/vectors/game-over-comic-speech-bubble-style-vector-illustrationjpg-vector-id1169155347?k=20&m=1169155347&s=612x612&w=0&h=eT4Jpj5ZqBu1oFS5Fv2rXPhvq_Q0JUIiPcvae1P3sVI="
+
 }
-  console.log("n = "+ (n-1))
+
   answers_container.innerHTML = ``
   result.answer_options.forEach((ele,index)=>{
 
@@ -139,7 +140,6 @@ async function questionsIncrement(){
     `<input type="button" class="btn" id="btn_answer${index}" value="${ele}">`
 })
 
-  console.log(result)
   question.innerHTML = result.question
 
   document.querySelectorAll(".answers .btn").forEach((ele) =>{
@@ -148,17 +148,13 @@ async function questionsIncrement(){
     ele.addEventListener('click',(e)=>{
         if(e.target.id === ele.id){
             
-            console.log("clicked on : "+e.target.value)
-            console.log("correct value is : "+result.correct_answer)
-            console.log(n)
+
             if(result.correct_answer === ele.value )
             {
                 choices[n-1] = true
-                console.log(choices)
                 score.innerHTML = itemCounter(choices,true)*10
                 e.target.style.backgroundColor = "green";
                 // localStorage.setItem("score", ++points)
-                // console.log("score is : "+localStorage.getItem("score"))
 
             }else{
               e.target.style.backgroundColor = "red";
@@ -187,30 +183,23 @@ n++
 async function initialQuestions(){
     let results = await fetchQuestions()
     let [result] = paginate(results, 1, 1)
-    console.log(result)
 
-    console.log("n = "+ 0)
     answers_container.innerHTML = ``
     result.answer_options.forEach((ele,index)=>{
         answers_container.innerHTML += 
         `<input type="button" class="btn" id="btn_answer${index}" value="${ele}">`
     })
 
-    console.log(results.length)
     question.innerHTML = result.question
 
     document.querySelectorAll(".answers .btn").forEach((ele) =>{
         ele.addEventListener('click',(e)=>{
 
-            console.log('colclcl')
             if(e.target.id === ele.id){
-                console.log("clicked on : "+e.target.value)
-                console.log("correct value is : "+result.correct_answer)
                 
                 if(result.correct_answer === ele.value )
                 {
                     choices[0] = true
-                    console.log(choices)
                     score.innerHTML = itemCounter(choices,true)*10
                     e.target.style.backgroundColor = "green";
   
