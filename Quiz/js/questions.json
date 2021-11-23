@@ -1,0 +1,109 @@
+
+{
+    "response_code": 0,
+    "results": [
+      {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "How many soccer players should be on the field at the same time?",
+        "correct_answer": "22",
+        "answer_options": [
+          "20",
+          "24",
+          "22",
+          "26"
+        ]
+      },
+      {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "In what sport is a &quot;shuttlecock&quot; used?",
+        "correct_answer": "Badminton",
+        "answer_options": [
+          "Table Tennis",
+          "Badminton"
+        ]
+      },
+      {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "In baseball, how many fouls are an out?",
+        "correct_answer": "0",
+        "answer_options": [
+          "5",
+          "3",
+          "0",
+          "2"
+        ]
+      },
+
+      {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "Which country has hosted the 2018 FIFA World Cup?",
+        "correct_answer": "Russia",
+        "answer_options": [
+          "Germany",
+          "Saudi Arabia",
+          "Russia"
+        ]
+      },
+      {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "Which team won 2014 FIFA World Cup in Brazil?",
+        "correct_answer": "Germany",
+        "answer_options": [
+            "Germany",
+          "Argentina",
+          "Brazil",
+          "Netherlands"
+        ]
+      },
+      {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "Who is often called &quot;the Maestro&quot; in the men&#039;s tennis circuit?",
+        "correct_answer": "Roger Federer",
+        "answer_options": [
+          "Bill Tilden",
+          "Boris Becker",
+          "Pete Sampras",
+          "Roger Federer"
+        ]
+      },
+      {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "What is the name of Manchester United&#039;s home stadium?",
+        "correct_answer": "Old Trafford",
+        "answer_options": [
+          "Anfield",
+          "City of Manchester Stadium",
+          "St James Park",
+          "Old Trafford"
+        ]
+      }
+      ,
+      {
+        "category": "Sports",
+        "type": "multiple",
+        "difficulty": "easy",
+        "question": "When was the FC Schalke 04 founded?",
+        "correct_answer": "1904",
+        "answer_options": [
+          "1909",
+          "1904",
+          "2008",
+          "1999"
+        ]
+      }
+    ]
+  }

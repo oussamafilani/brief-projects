@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap%27');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Nova Square', cursive;
+
+}
+
+body{
+
+    background-color: #28293D;
+    color: white;
+   
+}
+
+.players ul{
+    padding: 0;
+    margin: 0;
+}
+
+.players ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    list-style: none;
+    padding: 10px 20px;
+    /* border: 1px rgba(0, 0, 0, 0.062) solid; */
+    margin: 0;
+}
+
+.players ul li:nth-child(odd){
+    background-color: whitesmoke;
+}
+.avatar {
+    width: 60px;
+}
+
+.highscore{
+    width: 100%;
+    height: 100vh;
+    border-radius: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.highscore .score{
+    height: 25vh;
+    background-color: #28293D;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.highscore .players{
+    height: 75vh;
+    border-radius: 25px   25px 0 0;
+    background-color: #ffffff;
+}
+
+.flex-item{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.lex-item_1{
+width: 300px;
+}
+.lex-item_2{
+width: 50px;
+}
+
+.coin {
+    width: 18px;
+}
+.medal {
+    width: 30px;
+}

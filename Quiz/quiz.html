@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/quiz.css" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <header></header>
+    <div class="bg-win"></div>
+
+    <section>
+      <div class="container">
+        <div class="progress-bar">
+          <div class="progrss-head">
+            <div>
+              Question <span id="question_number"></span> /
+              <span id="question_total"></span>
+            </div>
+            <div id="countdown"></div>
+          </div>
+          <br />
+          <div id="progress">
+            <div id="increment"></div>
+          </div>
+        </div>
+
+        <div class="questions"></div>
+        <hr />
+        <div class="answers"></div>
+        <div class="next-question">
+          <button
+            id="next_btn"
+            class="btn next-btn"
+            style="font-weight: bold; text-transform: uppercase"
+          >
+            Skip
+          </button>
+          <div class="score">score :</div>
+          <div class="points" id="score">0</div>
+        </div>
+      </div>
+
+      <div id="box">
+        <img id="avatarImag" src="" alt="avatar" />
+        <h2>Score</h2>
+        <div
+          id="fina_score"
+          style="color: green; font-weight: bold; font-size: 45px"
+        >
+          99
+        </div>
+
+        <input type="text" placeholder="Enter your name" id="player_name" />
+        <a href="./highscore.html"
+          ><input type="button" value="Save" id="save"
+        /></a>
+      </div>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+
+#progress{
+    width: 60%;
+    border-radius: 25px;
+    height: 16px;
+    border: 1px solid black;
+}
+
+#increment{
+    width:0%;
+    height: 14px;
+    border-radius: 25px;
+    background-color: green;
+}

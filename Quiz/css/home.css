@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&display=swap%27');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Nova Square', cursive;
+
+}
+
+body{
+
+    background-color: #28293D;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-header{
+    width: 80%;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    padding: 2px;
+    
+
+}
+
+.btn{
+    background-color: #4BBA86; /* Green */
+    border: none;
+    /* width: 120px; */
+    color: white;
+    border-radius: 5px;
+    padding: 20px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: #28855a; /* Green */
+}
+
+
+.quiz-forum{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
