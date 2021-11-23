@@ -93,11 +93,11 @@ const choices = []
 async function questionsIncrement(){
   let results = await fetchQuestions()
   let [result] = paginate(results, 1, n)
-  if(n === (results.length) && (itemCounter(choices,true)*10 > (Math.floor(results.length /2)*10)  ) ){
+  if(n === (results.length) && (itemCounter(choices,true)*10 >= (Math.floor(results.length /2)*10)  ) ){
     let  uid = (new Date().getTime()).toString(36)
     let avatar = `https://avatars.dicebear.com/api/pixel-art/${uid}.svg`
 
-        document.getElementById("avatarImag").src = avatar
+      document.getElementById("avatarImag").src = avatar
       document.getElementById("box").style.display = "block";
       document.querySelector(".bg-win").style.display = "block";
       document.getElementById("countdown").style.display = "none";
@@ -129,7 +129,11 @@ async function questionsIncrement(){
       document.getElementById("box").style.display = "block";
       document.querySelector(".bg-win").style.display = "block";
       document.getElementById("countdown").style.display = "none";
-      document.getElementById("avatarImag").src = "https://media.istockphoto.com/vectors/game-over-comic-speech-bubble-style-vector-illustrationjpg-vector-id1169155347?k=20&m=1169155347&s=612x612&w=0&h=eT4Jpj5ZqBu1oFS5Fv2rXPhvq_Q0JUIiPcvae1P3sVI="
+      document.getElementById("player_name").style.display = "none"
+      document.getElementById("fina_score").innerHTML = itemCounter(choices,true)*10;
+      document.getElementById("save").style.display = "none"
+      document.getElementById("avatarImag").src = "./img/game-over.gif"
+      document.getElementById("avatarImag").style.width = "300px"
 
 }
 
