@@ -223,5 +223,16 @@ window.addEventListener('load',initialQuestions )
 
 
 
+// localStorage.setItem(
+
+//   [{"name": "oussama","score":  33,"avatar": "https://avatars.dicebear.com/api/pixel-art/djdjdjjdj.svg"},{"name": "oussama","score":  33,"avatar": "https://avatars.dicebear.com/api/pixel-art/djdddjdjjdj.svg"},{"name": "oussama","score":  33,"avatar": "https://avatars.dicebear.com/api/pixel-art/djdjdjjdj.svg"},{"name": "oussama","score":  33,"avatar": "https://avatars.dicebear.com/api/pixel-art/djdjdjjdj.svg"},{"name": "oussama","score":  33,"avatar": "https://avatars.dicebear.com/api/pixel-art/djdjdjjdj.svg"}]
+  
+  
+//   )
+  
+
+
+
+
 
 

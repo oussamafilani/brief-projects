@@ -80,6 +80,7 @@ window.addEventListener('load',()=>{
         /*html*/ `  <li>
          <div class="flex-item flex-item_1">
            <div>${index+1}</div>
+           <spam style=" width: 30px;margin :0 6px;"></spam>
            <img
              class="avatar"
              src="${ele.avatar}"
@@ -98,3 +99,7 @@ window.addEventListener('load',()=>{
     })
 
 })
+
+// const scorre = [{"name": "oussama","score":  33,"avatar": "https://avatars.dicebear.com/api/pixel-art/djdjdjjdj.svg"},{"name": "oussama","score":  33,"avatar": "https://avatars.dicebear.com/api/pixel-art/djdddjdjjdj.svg"},{"name": "oussama","score":  33,"avatar": "https://avatars.dicebear.com/api/pixel-art/djdjdjjdj.svg"},{"name": "oussama","score":  33,"avatar": "https://avatars.dicebear.com/api/pixel-art/djdjdjjdj.svg"},{"name": "oussama","score":  33,"avatar": "https://avatars.dicebear.com/api/pixel-art/djdjdjjdj.svg"}]
+
+// localStorage.setItem('scores',JSON.stringify([{"name": "oussama","score":  33,"avatar": "https://avatars.dicebear.com/api/pixel-art/djdjdjjdj.svg"},{"name": "oussama","score":  33,"avatar": "https://avatars.dicebear.com/api/pixel-art/djdddjdjjdj.svg"},{"name": "oussama","score":  33,"avatar": "https://avatars.dicebear.com/api/pixel-art/djdjdjjdj.svg"},{"name": "oussama","score":  33,"avatar": "https://avatars.dicebear.com/api/pixel-art/djdjdjjdj.svg"},{"name": "oussama","score":  33,"avatar": "https://avatars.dicebear.com/api/pixel-art/djdjdjjdj.svg"}]))
