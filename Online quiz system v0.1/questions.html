@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/questions.css" />
+    <title>Quiz v1</title>
+ 
+      </script>
+  </head>
+  <body>
+
+    <div class="modal_outer"></div>
+
+    <div class="box">
+      <div class="close">&#x2716;</div>
+      <div class="question--form">
+        <textarea class="question-text"></textarea>
+        <label for="question-types">Types :</label>
+          <select id="question-types">
+            <option value="single" selected>single choice</option>
+            <option value="multiple">multiple choice</option>
+            <option value="true_false">True/False</option>
+          </select>
+        
+        <label for="question-level">Levels : </label>
+          <select id="question-level">
+            <option value="easy">easy</option>
+            <option value="medium">medium</option>
+            <option value="hard">hard</option>
+          </select>
+       
+        <!-- <label for="answer_options">answer options</label> -->
+        <input class="answer-op" type="text" placeholder="answer option">
+        <input class="answer-op" type="text" placeholder="answer option">
+     
+        <!-- <label for="correct_answer">correct answer</label> -->
+        <input class="answer-cr" type="text" placeholder="correct answer">
+     
+      <input id="save--question" type="button" value="save">
+      </div>
+    </div>
+
+    <div class="box-view">
+      <div class="close">&#x2716;</div>
+      <p>jfjfjfjfjfj</p>
+
+    </div>
+
+
+    <nav>
+      <h1>All questions</h1>
+      <a id="add--question">Add a new question</a>
+    </nav>
+
+
+
+    <div class="questions">
+      <!-- inject blogs here from js -->
+      <div class="icon ico--more">
+
+      </div>
+    </div>
+
+    <script type="module" src="/js/questions.js" defer></script>
+  
+
+  </body>
+</html>

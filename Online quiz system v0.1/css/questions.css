@@ -1,0 +1,168 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+/* base styles */
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #eee;
+  font-family: 'Roboto';
+  color: #444;
+  max-width: 960px;
+  margin: 100px auto;
+  padding: 10px;
+  user-select: none;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+nav h1 {
+  margin: 0;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  background: #36cca2;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+form {
+  max-width: 500px;
+}
+input, textarea {
+  display: block;
+  margin: 16px 0;
+  padding: 6px 10px;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-family: 'Roboto';
+}
+textarea {
+  min-height:200px;
+}
+
+/* post list */
+.post {
+  padding: 25px 16px;
+  background: white;
+  border-radius: 10px;
+  margin: 20px 0;
+  position: relative;
+}
+.post h2 {
+  margin: 0;
+}
+.post p {
+  margin-top: 0;
+}
+.post a {
+  color: #36cca2;
+}
+
+
+.modal_outer {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 50%;
+  left: 50%;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  visibility: hidden;
+  /* display: none; */
+}
+
+.box-view,.box {
+  width: 60%;
+  overflow: hidden;
+  
+  background-color: white;
+  box-shadow: 0 0 10px black;
+  border-radius: 10px;
+  position: fixed;
+  color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  padding: 10px;
+  text-align: center;
+  /* display: block; */
+  visibility: hidden;
+}
+.close {
+  cursor: pointer;
+  float: right;
+}
+
+
+.btn{
+  background-color : #215A8E;
+  border: none;
+  border-radius: 2px;
+  color:white;
+  padding: 15px 10px;
+  font-size: 1rem;
+  margin: 15px 10px;
+  cursor: pointer;
+}
+
+.icon {
+  cursor: pointer;
+  transition: 150ms ease-out;
+  width: 20px;
+}
+
+.icon:hover{
+  filter: brightness(0.9);
+}
+.icon:focus{
+  filter: brightness(0.9);
+}
+
+.ico--more{
+  position: absolute;
+  top:2px;
+  right:12px;
+  margin-bottom: 5px;
+}
+
+.post--dropdown{
+  position: absolute;
+  top:18px;
+  right:12px;
+  background-color:white;
+  width: 88px;
+  border-radius:5px;
+  box-shadow: 0 7px 30px -10px rgba(150,170,180,0.5);
+  visibility:hidden;
+  z-index: 20;
+  overflow: hidden;
+}
+
+.post--dropdown ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.post--dropdown ul li{
+  padding: 5px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.137);
+  cursor: pointer;
+  
+}
+.post--dropdown ul li:last-child{
+  border: none;
+  
+}
+.post--dropdown ul li:hover{
+  background-color : rgba(0, 0, 0, 0.103);
+
+}

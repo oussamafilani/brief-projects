@@ -1,0 +1,22 @@
+{
+  "name": "online-quiz-system-v0.1",
+  "version": "1.0.0",
+  "description": "online quiz system v0.1",
+  "main": "js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oussamafilani/Quiz_APP.git"
+  },
+  "author": "filani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oussamafilani/Quiz_APP/issues"
+  },
+  "homepage": "https://github.com/oussamafilani/Quiz_APP#readme",
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}
