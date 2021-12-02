@@ -1,11 +1,11 @@
 "use strict";
 
 export default class Question {
-  constructor(id, type, id_sujet, difficulty, score, question, correct_answer, answer_options ) {
+  constructor(id, type, sujetId, levelId, score, question, correct_answer, answer_options ) {
     this.id = id;
     this.type = type ;
-    this.id_sujet = id_sujet;
-    this.difficulty = difficulty;
+    this.sujetId = sujetId;
+    this.levelId = levelId;
     this.score = score;
     this.question = question;
     this.correct_answer = correct_answer;

@@ -55,18 +55,21 @@
     {
       "id": "es89584958295",
       "description": "Easy",
+      "step": "0.5",
       "min": "6",
       "max": "15"
     },
     {
       "id": "md89584958295",
       "description": "Medium",
+      "step": "0.5",
       "min": "16",
       "max": "30"
     },
     {
       "id": "hd89584958295",
       "description": "Hard",
+      "step": "0.5",
       "min": "31",
       "max": "50"
     }
@@ -78,7 +81,9 @@
       "levelId": "es89584958295",
       "score": "12",
       "question": "How many soccer players should be on the field at the same time?",
-      "correct_answer": ["22"],
+      "correct_answer": [
+        "22"
+      ],
       "answer_options": [
         "20",
         "24",
@@ -94,7 +99,10 @@
       "levelId": "es89584958295",
       "score": "12",
       "question": "What is the name of Manchester United&#039;s home stadium?",
-      "correct_answer": ["Old Trafford","St James Park"],
+      "correct_answer": [
+        "Old Trafford",
+        "St James Park"
+      ],
       "answer_options": [
         "Anfield",
         "City of Manchester Stadium",
@@ -108,7 +116,9 @@
       "levelId": "es89584958295",
       "score": "12",
       "question": "How many soccer players should be on the field at the same time?",
-      "correct_answer": ["22"],
+      "correct_answer": [
+        "22"
+      ],
       "answer_options": [
         "20",
         "24",
@@ -123,7 +133,9 @@
       "levelId": "md89584958295",
       "score": "12",
       "question": "test physics  many soccer players should be on the field at the same time?",
-      "correct_answer": ["22"],
+      "correct_answer": [
+        "22"
+      ],
       "answer_options": [
         "20",
         "24",
@@ -133,14 +145,31 @@
       "id": "TmmRGlK"
     },
     {
-      "id": "kwng1asq",
-      "type": "single",
-      "id_sujet": "ma5986956896898",
-      "difficulty": "easy",
-      "score": "33",
-      "question": ["fjhfjfhj"],
-      "correct_answer": ["hjhh","jhjh"],
-      "answer_options": "jhjhjh"
+      "id": "kwp3qmly",
+      "type": "multiple",
+      "sujetId": "s5986956896898",
+      "levelId": "hd89584958295",
+      "score": "50",
+      "question": "you you",
+      "correct_answer": [
+        "you you"
+      ],
+      "answer_options": "you you"
+    },
+    {
+      "id": "kwp4ghim",
+      "type": "multiple",
+      "sujetId": "s5986956896898",
+      "levelId": "es89584958295",
+      "score": "6",
+      "question": "pc potable deel",
+      "correct_answer": [
+        "fofo",
+        "fofo",
+        "fofo",
+        "fofo"
+      ],
+      "answer_options": "fjfjfjfjfjfjfjfjjf"
     }
   ],
   "sujets": [

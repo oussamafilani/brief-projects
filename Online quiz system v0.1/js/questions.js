@@ -10,6 +10,8 @@ import Level from './classes/Level.js'
 const sujetId = new URLSearchParams(window.location.search).get('sujetId');
 
 const  qst   = await Question.GetQuestionsBysujetId(sujetId)
+const  subject   = await Subject.GetAll()
+const  levels   = await Level.GetAll()
 
 // const question = document.querySelector("#questions")
 
@@ -85,9 +87,9 @@ document.querySelector("#save--question").addEventListener('click',()=>{
     let qt = new Question(
         uid(),
         document.querySelector("#question-types").value,
-        "ma5986956896898",
+        document.querySelector("#subjects-options").value,
         document.querySelector("#question-level").value,
-        "33",
+        document.getElementById("score").value,
         document.querySelector(".question-text").value,
         anwer_op,
         document.querySelector(".answer-cr").value
@@ -96,6 +98,71 @@ document.querySelector("#save--question").addEventListener('click',()=>{
 
     Question.Save(qt);
 
+})
+
+const subjectsOtions = document.querySelector("#subjects-options");
+const questionLevel = document.querySelector("#question-level");
+
+
+subject.forEach((ele)=>{
+
+  subjectsOtions.innerHTML += 
+  /*html*/
+  `
+  <option value="${ele.id}">${ele.intitule}</option>
+  `
+
+})
+levels.forEach((ele)=>{
+
+  questionLevel.innerHTML += 
+  /*html*/
+  `
+  <option value="${ele.id}">${ele.description}</option>
+  `
+
+  
+
+})
+
+
+levels.forEach((ele) =>{
+
+  questionLevel.addEventListener('change',(e)=>{
+
+    if(e.target.value === ele.id)
+    {
+      document.querySelector(".score").innerHTML =
+    /*html*/
+      `
+      <label for="score">Points : <span class = "score--val">${ele.min}</span></label>
+
+      <input  type="range" id="score" min="${ele.min}" max="${ele.max}" value="0" step="${ele.step}">
+      ` 
+      
+      document.getElementById("score").addEventListener('change',()=>{
+      console.log("tsswbat " + document.getElementById("score").value)
+      document.querySelector(".score--val").innerHTML = `${document.getElementById("score").value}`
+      })
+    }
+    
+    
+    
+  
+
+  })
+
+  
+})
+
+document.getElementById("add-ans-option").addEventListener('click',()=>{
+
+  document.querySelector(".add--answers__option").innerHTML +=
+  `
+  <input class="answer-op" type="text" placeholder="answer option">
+
+  
+  `
 })
 
 

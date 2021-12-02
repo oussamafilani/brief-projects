@@ -16,29 +16,54 @@
     <div class="box">
       <div class="close">&#x2716;</div>
       <div class="question--form">
-        <textarea class="question-text"></textarea>
+        <label for="question-text">Enter your question:</label>
+        <textarea id="question-text" class="question-text" rows="3" cols="3"></textarea>
         <label for="question-types">Types :</label>
-          <select id="question-types">
+          <select id="question-types" >
             <option value="single" selected>single choice</option>
             <option value="multiple">multiple choice</option>
-            <option value="true_false">True/False</option>
           </select>
-        
+        <br>
         <label for="question-level">Levels : </label>
           <select id="question-level">
-            <option value="easy">easy</option>
-            <option value="medium">medium</option>
-            <option value="hard">hard</option>
+            <option value="">select one</option>
+          </select>
+       <br>
+
+       <div class="score">
+          </div>
+        <label for="subjects-options">Subjects : </label>
+          <select id="subjects-options">
+           
           </select>
        
-        <!-- <label for="answer_options">answer options</label> -->
-        <input class="answer-op" type="text" placeholder="answer option">
-        <input class="answer-op" type="text" placeholder="answer option">
-     
+          <br>
+        <div class="add--answers">
+          <label for="answer-op">answer options </label> 
+          <img id="add-ans-option" src="./public/icons/add-ans.svg" alt="add ans">
+
+          
+        </div>
+        <div class="add--answers__option">
+          <input class="answer-op" type="text" placeholder="answer option">
+          <input class="answer-op" type="text" placeholder="answer option">
+
+        </div>
         <!-- <label for="correct_answer">correct answer</label> -->
         <input class="answer-cr" type="text" placeholder="correct answer">
+
+        <div class="add--correct__answers">
+
+          <div class="correct-answer__child">
+
+            <label for="vehicle1"> I have a bike</label>
+            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+          </div>
+
+        </div>
+       
      
-      <input id="save--question" type="button" value="save">
+      <input id="save--question" type="button" value="save" class="btn">
       </div>
     </div>
 
