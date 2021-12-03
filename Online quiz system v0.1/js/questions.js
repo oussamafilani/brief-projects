@@ -34,7 +34,7 @@ qst.forEach((ele) => {
             <ul>
             <li>Edit</li>
             <li id="${ele.id}">Delete</li>
-            <li id="view--uestion">View</li>
+            <li id="viewquestion-${ele.id}">View</li>
             </ul>
         </div>
       <small>${ele.sujet["intitule"]}</small> >
@@ -48,6 +48,12 @@ qst.forEach((ele) => {
     document.addEventListener('click', (e)=>{
         if(e.target.id === ele.id ){
             Question.delete(ele.id )
+        }
+    })
+    document.addEventListener('click', (e)=>{
+        if(e.target.id === `viewquestion-${ele.id}` ){
+            console.log(e.target.previousSibling.id)
+            // console.log(e.target.id.split("-")[1])
         }
     })
 
@@ -79,9 +85,14 @@ qst.forEach((ele) => {
 
 document.querySelector("#save--question").addEventListener('click',()=>{
     const anwer_op = [];
+    const anwer_cr = [];
     
-    Array.from(document.querySelectorAll(".answer-op")).forEach(function(el) {
+    Array.from(document.querySelectorAll(".answer-op-tag")).forEach(function(el) {
         anwer_op.push(el.value)
+      });
+
+    Array.from(document.querySelectorAll("#answers__dropzone2 .answer-op-tag")).forEach(function(el) {
+      anwer_cr.push(el.value)
       });
 
     let qt = new Question(
@@ -92,7 +103,7 @@ document.querySelector("#save--question").addEventListener('click',()=>{
         document.getElementById("score").value,
         document.querySelector(".question-text").value,
         anwer_op,
-        document.querySelector(".answer-cr").value
+        anwer_cr
 
     )
 
@@ -155,19 +166,98 @@ levels.forEach((ele) =>{
   
 })
 
-document.getElementById("add-ans-option").addEventListener('click',()=>{
+let i = 0
+document.querySelector(".answer-op").addEventListener('keyup',(event)=>{
 
+  if (event.keyCode === 13 && document.querySelector(".answer-op").value != '') {
   document.querySelector(".add--answers__option").innerHTML +=
+  /*html*/
   `
-  <input class="answer-op" type="text" placeholder="answer option">
+  <input type="button" value="${document.querySelector(".answer-op").value}" class="answer-op-tag answer-op__${i}" draggable="true">
+  `
+  // <span class="del--ans__op">&#x2716;</span>
+  document.querySelector(".answer-op").value = ``
+  i++
+  hundelAnswerOptions()
+  }
 
-  
-  `
 })
 
 
+function hundelAnswerOptions(){
+  document.querySelectorAll(".answer-op-tag").forEach((element)=>{
+  element.addEventListener('click',(event)=>{
+    if(event.target.className === 'del--ans__op'){
+        element.remove()
+    }
+  })
+})
+}
+
+
+var dragged;
+
+document.querySelector(".add--answers__option").addEventListener('dragstart',(event)=>{
+  event.dataTransfer.setData('text/plain',null)
+})
+
+/* events fired on the drop targets */
+document.addEventListener("dragover", (event)=> {
+  // prevent default to allow drop
+  event.preventDefault();
+}, false);
+
+
+document.addEventListener("dragstart", (event)=>{
+  // store a ref. on the dragged elem
+  dragged = event.target;
+  // make it half transparent
+  event.target.style.opacity = .5;
+}, false);
+
+document.addEventListener("dragend", (event)=> {
+  // reset the transparency
+  event.target.style.opacity = "";
+}, false);
+
+/* events fired on the drop targets */
+document.addEventListener("dragover", (event) =>{
+  // prevent default to allow drop
+  event.preventDefault();
+}, false);
+
+document.addEventListener("dragenter", (event) => {
+  // highlight potential drop target when the draggable element enters it
+  if (event.target.className == "add--answers__option") {
+    event.target.style.background = "rgba(0, 0, 0, 0.2)";
+  }
+
+}, false);
+
+
+document.addEventListener("dragleave", (event) => {
+  // reset background of potential drop target when the draggable element leaves it
+  if (event.target.className == "add--answers__option") {
+    event.target.style.background = "";
+  }
+
+}, false);
+
+document.addEventListener("drop", (event) =>{
+  // prevent default action (open as link for some elements)
+  event.preventDefault();
+  // move dragged elem to the selected drop target
+  if (event.target.className == "add--answers__option") {
+    event.target.style.background = "";
+    dragged.parentNode.removeChild( dragged );
+    event.target.appendChild( dragged );
+  }
+}, false);
+
+
+
 const addQuestion = document.getElementById("add--question");
-const viewQuestion = document.getElementById("view--uestion");
+const viewQuestion = document.getElementById("view--question");
 const modal_outer = document.querySelector(".modal_outer");
 const box = document.querySelector(".box");
 const boxView = document.querySelector(".box-view");

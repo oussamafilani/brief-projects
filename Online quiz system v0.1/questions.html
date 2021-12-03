@@ -39,26 +39,23 @@
        
           <br>
         <div class="add--answers">
-          <label for="answer-op">answer options </label> 
-          <img id="add-ans-option" src="./public/icons/add-ans.svg" alt="add ans">
-
+          <label for="answer-op">Answer options </label> 
+          <img id="add-ans-option" src="./public/icons/add-ans.svg" alt="add answer">   
+        </div>
+        
+        <input  class="answer-op" type="text" placeholder="Answer options">
+        <div id="answers__dropzone1" class="add--answers__option">
+          
           
         </div>
-        <div class="add--answers__option">
-          <input class="answer-op" type="text" placeholder="answer option">
-          <input class="answer-op" type="text" placeholder="answer option">
 
-        </div>
-        <!-- <label for="correct_answer">correct answer</label> -->
-        <input class="answer-cr" type="text" placeholder="correct answer">
+        <!-- <input class="answer-cr" type="text" placeholder="correct answer"> -->
 
-        <div class="add--correct__answers">
+        <!-- <label>Corecct Answer</label>  -->
 
-          <div class="correct-answer__child">
-
-            <label for="vehicle1"> I have a bike</label>
-            <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-          </div>
+        <label style="margin-top: 20px;" for="add--answers__option">Corecct Answers</label> 
+        <div id="answers__dropzone2" class="add--answers__option">
+       <!-- here correct answers tag -->
 
         </div>
        
@@ -69,7 +66,6 @@
 
     <div class="box-view">
       <div class="close">&#x2716;</div>
-      <p>jfjfjfjfjfj</p>
 
     </div>
 
@@ -88,8 +84,6 @@
       </div>
     </div>
 
-    <script type="module" src="/js/questions.js" defer></script>
-  
-
+      <script type="module" src="/js/questions.js" defer></script>
   </body>
 </html>

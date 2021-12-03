@@ -82,7 +82,8 @@ textarea {
 .box-view,.box {
   width: 450px;
   overflow: hidden;
-  
+  height: 80vh;
+  overflow: scroll;
   background-color: white;
   box-shadow: 0 0 10px black;
   border-radius: 10px;
@@ -209,18 +210,57 @@ width: 30%;
 }
 
 .add--answers__option{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
   width:100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  min-height: 100px;
+
 }
-.add--correct__answers{
-  display:flex;
-  justify-content:space-between;
-  align-self: center;
-  width: 100%;
+.add--answers__option .answer-op-tag span{
+ cursor: pointer;
+
 }
 
-.correct-answer__child{
-  display:flex;
-  justify-content:space-between;
-  align-self: center;
-  width: 100%;
+.add--answers__option .answer-op-tag{
+  display: flex;
+margin: 4px 6px;
+color: white;
+padding: 6px 10px;
+border-radius: 20px;
+cursor: move;
 }
+.add--answers__option .answer-op-tag:nth-child(odd) {
+background-color: #5C5D71;
+}
+.add--answers__option .answer-op-tag:nth-child(even) {
+background-color: #B8C1C7;
+}
+
+
+ 
+#answers__dropzone2 .answer-op-tag{
+   display: flex;
+  background-color:#36cca2 ;
+ margin: 4px 6px;
+ color: white;
+ padding: 6px 10px;
+ border-radius: 20px;
+ cursor: move;
+ }
+
+
+
+
+.modal_outer{
+  /* visibility: visible; */
+}
+.box{
+  
+  /* visibility: visible; */
+
+}
+
