@@ -7,7 +7,20 @@ import Question from './classes/Question.js'
 import Level from './classes/Level.js'
 
 
+
+
+
+
 const sujetId = new URLSearchParams(window.location.search).get('sujetId');
+
+
+// ----------------------------------------------
+
+
+// ----------------------------------------------
+
+
+
 
 const  qst   = await Question.GetQuestionsBysujetId(sujetId)
 const  subject   = await Subject.GetAll()
@@ -34,7 +47,7 @@ qst.forEach((ele) => {
             <ul>
             <li>Edit</li>
             <li id="${ele.id}">Delete</li>
-            <li id="viewquestion-${ele.id}">View</li>
+            <li class="view--question" id="viewquestion-${ele.id}">View</li>
             </ul>
         </div>
       <small>${ele.sujet["intitule"]}</small> >
@@ -80,12 +93,12 @@ qst.forEach((ele) => {
 
 
 
-
-
-
 document.querySelector("#save--question").addEventListener('click',()=>{
+
+    let questionType
     const anwer_op = [];
     const anwer_cr = [];
+
     
     Array.from(document.querySelectorAll(".answer-op-tag")).forEach(function(el) {
         anwer_op.push(el.value)
@@ -97,7 +110,7 @@ document.querySelector("#save--question").addEventListener('click',()=>{
 
     let qt = new Question(
         uid(),
-        document.querySelector("#question-types").value,
+        questionType = anwer_cr.length > 1 ? "multiple" : "single",
         document.querySelector("#subjects-options").value,
         document.querySelector("#question-level").value,
         document.getElementById("score").value,
@@ -172,10 +185,12 @@ document.querySelector(".answer-op").addEventListener('keyup',(event)=>{
   if (event.keyCode === 13 && document.querySelector(".answer-op").value != '') {
   document.querySelector(".add--answers__option").innerHTML +=
   /*html*/
+  `<div class="answer-container" draggable="true">
+  <input type="button" value="${document.querySelector(".answer-op").value}" class="answer-op-tag answer-op__${i}">
+  <span class="del--ans__op">&#x2716;</span>
+  </div>
+
   `
-  <input type="button" value="${document.querySelector(".answer-op").value}" class="answer-op-tag answer-op__${i}" draggable="true">
-  `
-  // <span class="del--ans__op">&#x2716;</span>
   document.querySelector(".answer-op").value = ``
   i++
   hundelAnswerOptions()
@@ -185,7 +200,7 @@ document.querySelector(".answer-op").addEventListener('keyup',(event)=>{
 
 
 function hundelAnswerOptions(){
-  document.querySelectorAll(".answer-op-tag").forEach((element)=>{
+  document.querySelectorAll(".answer-container").forEach((element)=>{
   element.addEventListener('click',(event)=>{
     if(event.target.className === 'del--ans__op'){
         element.remove()
@@ -257,7 +272,7 @@ document.addEventListener("drop", (event) =>{
 
 
 const addQuestion = document.getElementById("add--question");
-const viewQuestion = document.getElementById("view--question");
+const viewQuestion = document.querySelector(".view--question");
 const modal_outer = document.querySelector(".modal_outer");
 const box = document.querySelector(".box");
 const boxView = document.querySelector(".box-view");

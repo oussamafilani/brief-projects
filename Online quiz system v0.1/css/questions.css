@@ -83,7 +83,7 @@ textarea {
   width: 450px;
   overflow: hidden;
   height: 80vh;
-  overflow: scroll;
+  overflow-y: scroll;
   background-color: white;
   box-shadow: 0 0 10px black;
   border-radius: 10px;
@@ -98,6 +98,36 @@ textarea {
   /* display: block; */
   visibility: hidden;
 }
+
+
+/*
+ *  START STYLE Scroll Bars
+ */
+
+ #style-1::-webkit-scrollbar-track
+ {
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+   border-radius: 10px;
+   background-color: #F5F5F5;
+ }
+ 
+ #style-1::-webkit-scrollbar
+ {
+   width: 12px;
+   background-color: #F5F5F5;
+ }
+ 
+ #style-1::-webkit-scrollbar-thumb
+ {
+   border-radius: 10px;
+   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+   background-color: #00000021;
+ }
+
+/*
+ *  END STYLE Scroll Bars
+ */
+
 .close {
   cursor: pointer;
   float: right;
@@ -220,47 +250,51 @@ width: 30%;
   min-height: 100px;
 
 }
-.add--answers__option .answer-op-tag span{
+.answer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.answer-container input[type=button]{
+  margin: 0 6px 0 0;
+  padding: 0;
+  background-color: inherit ;
+  color: white;
+  border: 0;
+  width: auto;
+  cursor: move;
+}
+
+.add--answers__option .answer-container span{
  cursor: pointer;
 
 }
 
-.add--answers__option .answer-op-tag{
-  display: flex;
+.add--answers__option .answer-container{
+display: flex;
 margin: 4px 6px;
 color: white;
 padding: 6px 10px;
 border-radius: 20px;
 cursor: move;
 }
-.add--answers__option .answer-op-tag:nth-child(odd) {
+.add--answers__option .answer-container:nth-child(odd) {
 background-color: #5C5D71;
 }
-.add--answers__option .answer-op-tag:nth-child(even) {
+.add--answers__option .answer-container:nth-child(even) {
 background-color: #B8C1C7;
 }
 
-
  
-#answers__dropzone2 .answer-op-tag{
-   display: flex;
-  background-color:#36cca2 ;
- margin: 4px 6px;
- color: white;
- padding: 6px 10px;
- border-radius: 20px;
- cursor: move;
+#answers__dropzone2 .answer-container{
+display: flex;
+background-color:#36cca2 ;
+margin: 4px 6px;
+color: white;
+padding: 6px 10px;
+border-radius: 20px;
+cursor: move;
  }
 
 
-
-
-.modal_outer{
-  /* visibility: visible; */
-}
-.box{
-  
-  /* visibility: visible; */
-
-}
 

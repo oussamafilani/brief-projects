@@ -44,12 +44,6 @@ async function  renderSubjects(id){
                 renderSubjects(ele.id)
             }
         })
-
-        document.addEventListener('click', async (e)=>{
-            if(e.target.id === `sub-questions-${ele.id}` ){
-                
-            }
-        })
     })
 }
 
