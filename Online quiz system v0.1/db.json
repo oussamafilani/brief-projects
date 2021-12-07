@@ -215,6 +215,25 @@
         "cr",
         "cr"
       ]
+    },
+    {
+      "id": "kwvx6taa",
+      "type": "multiple",
+      "sujetId": "s5986956896898",
+      "levelId": "hd89584958295",
+      "score": "50",
+      "question": "jfjfjffjfj ?",
+      "correct_answer": [
+        "ooo",
+        "fff",
+        "fff",
+        "ff",
+        "fff"
+      ],
+      "answer_options": [
+        "ff",
+        "fff"
+      ]
     }
   ],
   "sujets": [

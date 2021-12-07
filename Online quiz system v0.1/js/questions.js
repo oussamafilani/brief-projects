@@ -273,7 +273,7 @@ document.addEventListener("drop", (event) =>{
 
 
 const addQuestion = document.getElementById("add--question");
-const viewQuestion = document.querySelector(".view--question");
+// const viewQuestion = document.querySelector(".view--question");
 const modal_outer = document.querySelector(".modal_outer");
 const box = document.querySelector(".box");
 const boxView = document.querySelector(".box-view");
@@ -284,10 +284,10 @@ addQuestion.addEventListener("click", () => {
   modal_outer.style.visibility = "visible";
 });
 
-viewQuestion.addEventListener("click", () => {
-  boxView.style.visibility = "visible";
-  modal_outer.style.visibility = "visible";
-});
+// viewQuestion.addEventListener("click", () => {
+//   boxView.style.visibility = "visible";
+//   modal_outer.style.visibility = "visible";
+// });
 
 close.addEventListener("click", () => {
   box.style.visibility = "hidden";
