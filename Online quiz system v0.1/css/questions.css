@@ -189,6 +189,11 @@ textarea {
   cursor: pointer;
   
 }
+.post--dropdown ul li a{
+  text-decoration: none;
+  color: black;
+  
+}
 .post--dropdown ul li:last-child{
   border: none;
   

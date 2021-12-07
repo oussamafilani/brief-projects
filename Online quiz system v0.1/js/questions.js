@@ -36,6 +36,7 @@ const  uid =  () =>  (new Date().getTime()).toString(36)
 
 
 qst.forEach((ele) => {
+  // <li class="view--question" id="viewquestion-${ele.id}">View</li>
     container.innerHTML +=
     /*html*/
     `
@@ -47,7 +48,7 @@ qst.forEach((ele) => {
             <ul>
             <li>Edit</li>
             <li id="${ele.id}">Delete</li>
-            <li class="view--question" id="viewquestion-${ele.id}">View</li>
+            <li > <a href="details.html?id=${ele.id}">View</a>
             </ul>
         </div>
       <small>${ele.sujet["intitule"]}</small> >
