@@ -1,0 +1,45 @@
+.login{
+    margin: 0;
+    width: 60%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $white-color;
+    border-radius: 1rem;
+    display: flex;
+
+    &--form{
+        flex: 0 0 50%;
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 0 4rem;
+        
+        input[type=text],
+        input[type=email],
+        input[type=password]{
+            padding: 1rem;
+            width: 100%;
+            border-radius: 1rem;
+            border: none;
+            box-shadow: $box-shadow-1;
+            border: 1px solid  rgba($color: $drak-color, $alpha: .2);
+        }
+
+        
+        h2,h3{
+            align-self: center;
+        }
+        
+    }
+
+    &--img{
+        flex: 0 0 50%;
+        border-radius: 0 1rem 1rem 0;
+    }
+
+}

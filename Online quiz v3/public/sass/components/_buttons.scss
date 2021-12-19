@@ -1,0 +1,22 @@
+.btn{
+    // display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 1rem;
+    border: none;
+    padding: 1rem;
+    box-shadow: $box-shadow-1;
+    transition: transform 0.5s;
+    &:hover{
+      transform: translateY(-4px);
+   }
+  }
+  .btn1{
+      background-color: black;
+      color: whitesmoke;
+  }
+
+  .btn2{
+      background-color: white;
+
+  }
