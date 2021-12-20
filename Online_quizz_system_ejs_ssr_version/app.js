@@ -9,7 +9,7 @@
 const port = 3007,
 config = require("./config/conn");
 getEtu = require("./config/conn");
-getEtuP = require("./config/connection");
+// getEtuP = require("./config/connection");
 http = require("http"),
 httpStatus = require("http-status-codes"),
 fs = require("fs");
@@ -21,7 +21,7 @@ ejs = require('ejs');
 //     { id: 3, name: "jake" },
 // ];
 
-var data =    getEtuP()
+var data =    getEtu()
 // var data =  JSON.parse( getEtu())
 
 // const data = async () => {
@@ -43,8 +43,8 @@ const sendErrorResponse = res => {
   
   const server = http
     .createServer( async (req, res) => {
-      const [myData] = {
-        data: await data.rows
+      const myData = {
+        data: await data
       }
       let url = req.url;
     
