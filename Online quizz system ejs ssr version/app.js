@@ -9,6 +9,7 @@
 const port = 3007,
 config = require("./config/conn");
 getEtu = require("./config/conn");
+getEtuP = require("./config/connection");
 http = require("http"),
 httpStatus = require("http-status-codes"),
 fs = require("fs");
@@ -20,7 +21,7 @@ ejs = require('ejs');
 //     { id: 3, name: "jake" },
 // ];
 
-var data =    getEtu()
+var data =    getEtuP()
 // var data =  JSON.parse( getEtu())
 
 // const data = async () => {
@@ -42,6 +43,9 @@ const sendErrorResponse = res => {
   
   const server = http
     .createServer( async (req, res) => {
+      const [myData] = {
+        data: await data.rows
+      }
       let url = req.url;
     
       if (url.indexOf(".html") !== -1) {
@@ -56,7 +60,7 @@ const sendErrorResponse = res => {
               "Content-Type": "text/html"
             });
 
-            ejs.renderFile(`./views${url}`, {data: await data}, {}, (err, str) => {
+            ejs.renderFile(`./views${url}`, myData, (err, str) => {
                 // str => Rendered HTML string
                 if (err) {
                  console.log(err)
