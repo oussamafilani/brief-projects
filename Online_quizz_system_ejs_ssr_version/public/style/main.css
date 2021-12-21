@@ -154,6 +154,7 @@ body::-webkit-scrollbar-thumb {
   padding: 1rem;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   transition: transform 0.5s;
+  text-align: center;
 }
 .btn:hover {
   transform: translateY(-4px);
@@ -199,8 +200,19 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(5, 5, 5, 0.2);
 }
+.login--form .checkbox {
+  display: flex;
+  gap: 1rem;
+}
 .login--form h2, .login--form h3 {
   align-self: center;
+}
+.login--form h3 {
+  font-size: 400;
+  color: rgba(0, 0, 0, 0.6);
+}
+.login--form .btn {
+  align-self: stretch;
 }
 .login--img {
   flex: 0 0 50%;
